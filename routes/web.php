@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PetController;
 use App\Services\Examen;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,5 @@ Route::get('/test', function(){
 
     return $repsonse;
 });
+
+Route::resource('pets', PetController::class)->names('pets');
